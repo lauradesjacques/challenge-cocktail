@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Cocktail} from '../cocktail.model'
+import { Cocktail} from '../common/cocktail.model'
 import { CocktailService } from '../cocktail.service';
 
 @Component({
@@ -10,12 +10,19 @@ import { CocktailService } from '../cocktail.service';
 export class CocktailListComponent implements OnInit {
 
   public titre = 'Liste des cocktails'
-  public cocktails: Cocktail[] = new Array<Cocktail>();
-  constructor(public cocktailService: CocktailService) { }
+  public cocktails: Cocktail[] 
+  private service:CocktailService;
 
-  ngOnInit(): void {
-    this.cocktails = this.cocktailService.getCocktails();
+  constructor( cocktailService:CocktailService ){
+      this.service  = cocktailService;
   }
 
+  ngOnInit(): void {
+    this.service.getCocktails().subscribe(
+      (params_data: Cocktail[] ) => {
+          this.cocktails  =  params_data;
+  });
 
+  }
 }
+

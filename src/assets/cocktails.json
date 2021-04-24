@@ -1,0 +1,12 @@
+
+[
+{"name":"Mai Tai",
+  "price" : 5.5, 
+  "imageUrl":"https://cdn.pixabay.com/photo/2015/03/18/21/20/mai-tai-680020_1280.jpg"},
+{"name":"Mojito",
+"price": 4.8,
+"imageUrl": "https://cdn.pixabay.com/photo/2017/01/09/11/34/summer-drink-1966290_1280.jpg"},
+{"name":"Pina Colada",
+"price":6.2,
+"imageUrl": "https://cdn.pixabay.com/photo/2016/05/20/22/10/pineapple-1406121_1280.jpg" }
+]
