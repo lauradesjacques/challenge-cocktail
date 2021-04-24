@@ -1,0 +1,15 @@
+<h1> {{titre}}</h1>
+
+<div class="container" class="row"> 
+  
+ <div *ngFor= "let cocktail of cocktails" class="card" style="width: 18rem;" class="col">
+   <img src="{{cocktail.imageUrl}}" class="card-img-top" alt="image" >
+    <div class="card-body">
+      <h5 class="card-title">{{cocktail.name}}</h5>
+      <p class="card-text"> {{cocktail.price}}</p>
+      <p class="card-text"></p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
+  
